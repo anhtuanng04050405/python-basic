@@ -1,6 +1,9 @@
-﻿1. Biến, kiểu dữ liệu
+<h3 align="center"> PYTHON BASIC </h3>
 
-   1\. 1. Cách khai báo: tên\_biến = giá\_trị
+<details>
+<summary><b>1. Biến, kiểu dữ liệu</b></summary>
+
+   <b>1\. 1. Cách khai báo:</b> ```tên_biến = giá_trị```
 
    Ví dụ:
 
@@ -12,9 +15,9 @@
 
    is\_student = True;
 
-   daiso, giaitich, nhapmoncntt\_tt = 2.5, 2.5, 3.0 #
+   daiso, giaitich, nhapmoncntt\_tt = 2.5, 2.5, 3.0
 
-   1\.2. Các kiểu dữ liệu:
+   <b>1\.2. Các kiểu dữ liệu:</b>
 
    |Số nguyên|int|
    | :- | :- |
@@ -23,130 +26,131 @@
    |Logic|bool|
    |Giá trị rỗng|NoneType|
 
-   1\.3. Kiểm tra và ép kiểu dữ liệu
+   <b>1\.3. Kiểm tra và ép kiểu dữ liệu</b>
 
-   1\.3.1. Kiểm tra kiểu dữ liệu:
+   ><b>1\.3.1. Kiểm tra kiểu dữ liệu:</b>
+   >
+   >```python
+   >a = 100
+   >print(type(a))  # Kết quả: <class 'int'>
+   >```
 
-   a = 100
+   ><b>1\.3.2. Ép kiểu dữ liệu:</b>
+   >```python
+   >#Chuyển chuỗi thành số
+   >num_str = "123"
+   >num_int = int(num_str) # 123 (int) 
+   >num_float = float(num_str) # 123.0 (float) 
+   >#Chuyển số thành chuỗi 
+   >age = 20 
+   >age_str = str(age) # "20" (str)
+   >```
+   
+</details>
 
-   print(type(a))  # Kết quả: <class 'int'>
+<details>
+   
+<summary><b>2. Nhập xuất</b></summary>
 
-   1\.3.2. Ép kiểu dữ liệu:
-
-   # Chuyển chuỗi thành số
-
-   num\_str = "123"
-
-   num\_int = int(num\_str) # 123 (int) 
-
-   num\_float = float(num\_str) # 123.0 (float) 
-
-   # Chuyển số thành chuỗi 
-
-   age = 20 
-
-   age\_str = str(age) # "20" (str)
-
-1. Nhập xuất
-   1. Xuất dữ liệu
+<b>1. Xuất dữ liệu</b>
 
 Dùng print:
 
+```python
 name = "Python"
-
 version = 3.12
-
 score = 9.5678
-
-\# Xuất cơ bản
-
+# Xuất cơ bản
 print("Xin chào!")
-
-\# Xuất sử dụng f-string và định dạng số thập phân
-
+# Xuất sử dụng f-string và định dạng số thập phân
 print(f"Ngôn ngữ: {name} | Phiên bản: {version}")
-
 print(f"Điểm số: {score:.2f}")  # Lấy 2 chữ số thập phân -> 9.57
+```
 
-Mở rộng: Xuất sang txt, excel, ... (cái này dùng thư viện, basic chưa cần)
+<b>Mở rộng: </b>Xuất sang txt, excel, ... (cái này dùng thư viện, basic chưa cần)
 
-1. Nhập dữ liệu
-   1. Nhập và ép kiểu dữ liệu:
+<b>2. Nhập dữ liệu</b>
 
-\# Nhập chuỗi
+>   2\.1. Nhập và ép kiểu dữ liệu:
+>
+>```python
+># Nhập chuỗi
+>name = input("Nhập tên của bạn: ")
+># Nhập số nguyên (int)
+>age = int(input("Nhập tuổi: "))
+># Nhập số thực (float)
+>height = float(input("Nhập chiều cao (m): "))
+>print(f"Xin chào {name}, {age} tuổi, cao {height}m.")
+>```
 
-name = input("Nhập tên của bạn: ")
-
-\# Nhập số nguyên (int)
-
-age = int(input("Nhập tuổi: "))
-
-\# Nhập số thực (float)
-
-height = float(input("Nhập chiều cao (m): "))
-
-print(f"Xin chào {name}, {age} tuổi, cao {height}m.")
-
-Nhập nhiều giá trị trên cùng 1 dòng:
-
-\# Nhập nhiều chuỗi (ví dụ nhập: Hà Nội TP.HCM Đà Nẵng)
-
-city1, city2, city3 = input("Nhập 3 thành phố: ").split()
-
-\# Nhập dãy số và chuyển thành danh sách số nguyên (ví dụ nhập: 5 10 15 20)
-
-numbers = list(map(int, input("Nhập các số nguyên cách nhau bởi khoảng trắng: ").split()))
-
-print("Danh sách vừa nhập:", numbers)
+>   2\.2. Nhập nhiều giá trị trên cùng 1 dòng:
+>   
+>```python
+># Nhập nhiều chuỗi (ví dụ nhập: Hà Nội TP.HCM Đà Nẵng)
+>city1, city2, city3 = input("Nhập 3 thành phố: ").split()
+># Nhập dãy số và chuyển thành danh sách số nguyên (ví dụ nhập: 5 10 15 20)
+>numbers = list(map(int, input("Nhập các số nguyên cách nhau bởi khoảng trắng: ").split()))
+>print("Danh sách vừa nhập:", numbers)
+>```
 
 **Bài 1:** Nhập tên học sinh, ngày sinh, quê quán, tên trường THPT, điểm thi đại học toán, lí, hóa:
 
-![](Aspose.Words.34c40401-dd65-4a5d-aa5f-b9cdecc54682.001.png)
+<b>Lời giải: </b>https://github.com/anhtuanng04050405/python-basic/blob/main/bai1.py
 
-1. Mảng
-   1. Khai báo mảng
+</details>
 
-      # Cách 1: Khai báo mảng rỗng
+<details>
+   
+<summary><b>3. Mảng</b></summary>
 
-      arr = []
+   <b>1. Khai báo mảng</b>
 
-      # Cách 2: Khai báo mảng có sẵn các giá trị
+```python
+# Cách 1: Khai báo mảng rỗng
+arr = []
+# Cách 2: Khai báo mảng có sẵn các giá trị
+arr = [5, 10, 15, 20, 25]
+# Cách 3: Khai báo mảng gồm n phần tử mang giá trị mặc định
+n = 5
+arr = []*n
+```
 
-      arr = [5, 10, 15, 20, 25]
+   <b>2. Nhập mảng từ bàn phím</b>
 
-      # Cách 3: Khai báo mảng gồm n phần tử mang giá trị mặc định
+Nhập từng phần từ trên từng dòng:
+      
+```python
+n = int(input("Nhập số lượng phần tử n = "))
+arr = []
+for i in range(n):
+   val = int(input(f"Nhập phần tử thứ {i}: "))
+   arr.append(val)
+```
 
-      n=5
+Nhập tất cả phần tử trên 1 dòng:
 
-      arr = []\*n
+```python
+# Nhập chuỗi -> tách theo dấu cách (split) -> chuyển thành số nguyên (map) -> tạo mảng (list)
+arr = list(map(int, input("Nhập các phần tử cách nhau bởi dấu cách: ").split()))
+```
 
-   1. Nhập mảng từ bàn phím
+   <b>3. Xuất mảng ra màn hình</b>
 
-      Nhập từng phần từ trên từng dòng:
+```python
+#Cách 1:
+print(arr);
+#Cách 2:
+print(*arr);
+#Cách 3:
+for x in arr:
+   print(x, end=" ")
+```
 
-      n = int(input("Nhập số lượng phần tử n = "))
+   <b>4. Truy cập theo chỉ số</b>
 
-      arr = []
-
-      for i in range(n):
-
-      `    `val = int(input(f"Nhập phần tử thứ {i}: "))
-
-      `    `arr.append(val)
-
-      Nhập tất cả phần tử trên 1 dòng:
-
-      # Nhập chuỗi -> tách theo dấu cách (split) -> chuyển thành số nguyên (map) -> tạo mảng (list)
-
-      arr = list(map(int, input("Nhập các phần tử cách nhau bởi dấu cách: ").split()))
-
-   1. Xuất mảng ra màn hình
-
-print(arr); print(\*arr); for x in arr: print(x, end=" ")
-
-1. Truy cập theo chỉ số
-
-   arr[index]
+```python
+arr[index]
+```
 
 **Bài 2: Khai báo Mảng**
 
@@ -154,58 +158,79 @@ print(arr); print(\*arr); for x in arr: print(x, end=" ")
 
 \- Khai báo một mảng chứa 4 giá trị số thực double rỗng (mang giá trị mặc định là 0.0).
 
-![](Aspose.Words.34c40401-dd65-4a5d-aa5f-b9cdecc54682.002.png)
+<b>Lời giải: </b>https://github.com/anhtuanng04050405/python-basic/blob/main/bai2.py
 
 **Bài 3: Phần tử chẵn**
 
 \- Cho mảng A gồm n số nguyên dương, đếm số lượng phần tử chẵn của mảng.
 
-![](Aspose.Words.34c40401-dd65-4a5d-aa5f-b9cdecc54682.003.png)
+<b>Lời giải: </b>https://github.com/anhtuanng04050405/python-basic/blob/main/bai3.py
 
-1. If else/ switch case
-   1. Cấu trúc if ... elif ... else
-   1. Toán tử 3 ngôi <True> if <Điều kiện> else <False>
-   1. Kết hợp nhiều điều kiện (and, or, not)
-   1. match ... case
-1. For/ while
-   1. for
+</details>
 
-      # Duyệt qua các phần tử trong danh sách (List)
+<details>
+   
+<summary><b>4. If else/ switch case</b></summary>
 
-      fruits = ["táo", "chuối", "cam"]
+1. Cấu trúc ```if ... elif ... else```
+2. Toán tử 3 ngôi ```<True> if <Điều kiện> else <False>```
+3. Kết hợp nhiều điều kiện ```(and, or, not)```
+4. ```match ... case```
 
-      for fruit in fruits:
+</details>
 
-      `    `print(fruit)
+<details>
 
-      # Duyệt theo chuỗi số với hàm range(start, stop, step)
+<summary><b>5. For/ while</b></summary>
 
-      for i in range(1, 5):
+<b>1.</b> ```for```
+```python
+# Duyệt qua các phần tử trong danh sách (List)
+fruits = ["táo", "chuối", "cam"]
+for fruit in fruits:
+   print(fruit)
+# Duyệt theo chuỗi số với hàm range(start, stop, step)
+for i in range(1, 5):
+   print(i)  # In ra từ 1 đến 4
+```
 
-      `    `print(i)  # In ra từ 1 đến 4
+<b>2.</b> ```while```
 
-   1. while
+```python
+count = 1
+while count <= 3:
+   print(f"Lần lặp thứ {count}")
+   count += 1  # Bắt buộc cập nhật biến điều kiện để tránh lặp vô tận
+```
 
-      count = 1
+<b>3.</b> Các câu lệnh điều khiển trong vòng lặp
 
-      while count <= 3:
+```python
+break; continue;
+```
 
-      `    `print(f"Lần lặp thứ {count}")
+</details>
 
-      `    `count += 1  # Bắt buộc cập nhật biến điều kiện để tránh lặp vô tận
+<details>
+   
+<summary><b>6. Hàm</b></summary>
 
-   1. Các câu lệnh điều khiển trong vòng lặp
-
-      break; continue;
-
-1. Hàm
-
-   Cú pháp: def tên\_hàm(tham số 1, tham số 2, ...): return (nếu có)
-
+<b>Cú pháp: </b>
+```python
+def tên_hàm(tham số 1, tham số 2, ...):
+   return (nếu có)
+```
 **Bài 4: <https://marisaoj.com/problem/40>**
 
-1. Collection/ Container
-   1. List
+<b>Lời giải: </b>https://github.com/anhtuanng04050405/python-basic/blob/main/bai4.py
+
+</details>
+
+<details>
+
+<summary><b>7. Collection/ Container</b></summary>
+
+<b>1. List</b>
 
 |**Thao tác**|**Python**|
 | :-: | :-: |
@@ -219,21 +244,21 @@ print(arr); print(\*arr); for x in arr: print(x, end=" ")
 
 **Bài 5:**
 
-**Truy vấn mở rộng trên Mảng Động**
+<h4 align="center">Truy vấn mở rộng trên Mảng Động</h4>
 
-Cho một mảng gồm N số nguyên (đánh số chỉ số từ 1 đến N) và Q truy vấn. Bạn cần xử lý lần lượt Q truy vấn thuộc một trong bốn loại sau:
+Cho một mảng gồm $N$ số nguyên (đánh số chỉ số từ $1$ đến $N$) và $Q$ truy vấn. Bạn cần xử lý lần lượt $Q$ truy vấn thuộc một trong bốn loại sau:
 
-**Loại 0 (0 val):** Thêm số nguyên val vào cuối mảng (kích thước mảng tự động tăng thêm 1).
+**Loại 0 (`0 val`):** Thêm số nguyên $val$ vào cuối mảng (kích thước mảng tự động tăng thêm $1$).
 
-**Loại 1 (1 i val):** Thay đổi giá trị phần tử tại chỉ số i thành val (1≤i≤kích thước mảng hiện tại).
+**Loại 1 (`1 i val`):** Thay đổi giá trị phần tử tại chỉ số $i$ thành $val$ ($1 \le i \le \text{kích thước mảng}$).
 
-**Loại 2 (2 L R):** Sắp xếp tăng dần các phần tử từ chỉ số L đến R (i≤L≤R≤kích thước mảng hiện tại).
+**Loại 2 (`2 L R`):** Sắp xếp tăng dần các phần tử từ chỉ số $L$ đến $R$ ($1 \le L \le R \le \text{kích thước mảng}$).
 
-**Loại 3 (3):** In toàn bộ phần tử của mảng hiện tại ra màn hình trên một dòng, các số cách nhau bởi dấu khoảng trắng.
+**Loại 3 (`3`):** In toàn bộ phần tử của mảng hiện tại ra màn hình trên một dòng, các số cách nhau bởi dấu khoảng trắng.
 
 **Dữ liệu vào (Input)**
 
-- Dòng thứ nhất chứa 2 số nguyên N, Q (1≤N,Q≤1000).
+- Dòng thứ nhất chứa $2$ số nguyên $N, Q$ ($1 \le N, Q \le 1000$).
 - Dòng thứ hai chứa N số nguyên mô tả mảng ban đầu.
 - Q dòng tiếp theo, mỗi dòng biểu diễn một truy vấn thuộc 1 trong 4 dạng trên.
 
@@ -450,3 +475,5 @@ left = dq.popleft() # Xóa bên trái -> 10
 right = dq.pop()    # Xóa bên phải -> 40
 
 print("Lưới deque còn lại:", dq)  # Output: deque([20, 30])
+
+<details>
