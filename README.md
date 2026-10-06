@@ -259,8 +259,8 @@ Cho một mảng gồm $N$ số nguyên (đánh số chỉ số từ $1$ đến 
 **Dữ liệu vào (Input)**
 
 - Dòng thứ nhất chứa $2$ số nguyên $N, Q$ ($1 \le N, Q \le 1000$).
-- Dòng thứ hai chứa N số nguyên mô tả mảng ban đầu.
-- Q dòng tiếp theo, mỗi dòng biểu diễn một truy vấn thuộc 1 trong 4 dạng trên.
+- Dòng thứ hai chứa $N$ số nguyên mô tả mảng ban đầu.
+- $Q$ dòng tiếp theo, mỗi dòng biểu diễn một truy vấn thuộc 1 trong 4 dạng trên.
 
 **Dữ liệu ra (Output)**
 
@@ -268,60 +268,54 @@ Cho một mảng gồm $N$ số nguyên (đánh số chỉ số từ $1$ đến 
 
 **Ví dụ**
 
-|**Input**|**Output**|
+|Input|Output|
 | :-: | :-: |
-|<p>4 6</p><p>5 2 8 1</p><p>0 3</p><p>2 2 5</p><p>3</p><p>1 1 9</p><p>0 7</p><p>3</p>|<p>5 1 2 3 8</p><p>9 1 2 3 8 7</p>|
+|4 6<br>5 2 8 1<br>0 3<br>2 2 5<br>3<br>1 1 9<br>0 7<br>3|5 1 2 3 8<br>9 1 2 3 8 7|
 
 **Python:**
 
-1. Dict
+<b>2. Dict</b>
+
 1. dict
 
 Lưu theo cặp key-value
 
 Duy trì thứ tự theo thứ tự chèn, chèn trước đứng trước
 
-my\_dict = {"apple": 5, "banana": 2} my\_dict["orange"] = 8 # Thêm phần tử O(1) print(my\_dict["apple"]) # Truy xuất O(1)
+```python
+my_dict = {"apple": 5, "banana": 2}
+my_dict["orange"] = 8 # Thêm phần tử O(1) 
+print(my_dict["apple"]) # Truy xuất O(1)
+```
 
-1. SortedDict
+2. SortedDict
 
-Thư viện: sortedcontainers
-
+```python
 from sortedcontainers import SortedDict
-
-s\_dict = SortedDict()
-
-s\_dict["banana"] = 2
-
-s\_dict["apple"] = 5
-
-s\_dict["orange"] = 8
-
-\# Key tự động sắp xếp: ['apple', 'banana', 'orange']
-
+s_dict = SortedDict()
+s_dict["banana"] = 2
+s_dict["apple"] = 5
+s_dict["orange"] = 8
+# Key tự động sắp xếp: ['apple', 'banana', 'orange']
 for key, value in s\_dict.items():
-
-`    `print(key, value)
+   print(key, value)
+```
 
 **Bài 6:**
 
-**Mảng cộng dồn động**
+<h4 align="center">Mảng cộng dồn động</h4>
 
-Giới hạn thời gian: 1000 ms
+Cho một mảng $A$ gồm $n$ phần tử số nguyên. Bạn cần xử lý $q$ truy vấn thuộc một trong ba loại:
 
-Giới hạn bộ nhớ: 256 MB
-
-Cho một mảng A gồm n phần tử số nguyên. Bạn cần xử lý q truy vấn thuộc một trong ba loại:
-
-- 1 x: Thêm giá trị x vào cuối của mảng A.
-- 2: Xóa giá trị cuối cùng của mảng A.
-- 3 l r: Tính tổng phần tử từ có chỉ số từ l đến r, chỉ số của mảng bắt đầu từ 1.
+- $1 x$: Thêm giá trị $x$ vào cuối của mảng $A$.
+- $2$: Xóa giá trị cuối cùng của mảng $A$.
+- $3 l r$: Tính tổng phần tử từ có chỉ số từ $l$ đến $r$, chỉ số của mảng bắt đầu từ 1.
 
 **Input**
 
-- Dòng đầu tiên gồm hai số nguyên n,q.
-- Dòng thứ hai gồm n số nguyên Ai.
-- q dòng tiếp theo, mỗi dòng gồm một truy vấn theo định dạng đã nêu trên.
+- Dòng đầu tiên gồm hai số nguyên $n,q$.
+- Dòng thứ hai gồm $n$ số nguyên $A_i$.
+- $q$ dòng tiếp theo, mỗi dòng gồm một truy vấn theo định dạng đã nêu trên.
 
 **Output**
 
@@ -329,116 +323,68 @@ Cho một mảng A gồm n phần tử số nguyên. Bạn cần xử lý q
 
 **Điều kiện**
 
-- 1≤n,q≤105.
-- 1≤x≤109.
-- 1≤l≤r≤|A| với |A| là độ dài của mảng A lúc truy vấn này xuất hiện.
+- $1≤n,q≤105$.
+- $1≤x≤109$.
+- $1≤l≤r≤|A|$ với $|A|$ là độ dài của mảng $A$ lúc truy vấn này xuất hiện.
 
 **Ví dụ**
 
-Input
+| Input | Output |
+| :--- | :--- |
+|5 4<br>1 2 3 4 5<br>1 6<br>3 1 6<br>2<br>3 2 3|21<br>5|
 
-5 4
+**Lời giải:** https://github.com/anhtuanng04050405/python-basic/blob/main/bai6.py
 
-1 2 3 4 5
+<b>3. Set và Counter</b>
 
-1 6
+<b>1. Set</b>
 
-3 1 6
-
-2
-
-3 2 3
-
-Copy
-
-Output:
-
-21
-
-5
-
-**Python:**
-
-1. Set và Counter
-   1. Set
-
-\# Tạo set
-
+```python
+# Tạo set
 s = {1, 2, 3, 3, 4}  # Kết quả: {1, 2, 3, 4} (tự loại bỏ phần tử trùng)
-
-\# Thêm và xóa phần tử
-
+# Thêm và xóa phần tử
 s.add(5)         # Thêm phần tử
-
 s.remove(2)      # Xóa phần tử 2 (báo lỗi KeyError nếu không tồn tại)
-
 s.discard(10)    # Xóa phần tử 10 (không báo lỗi nếu không tồn tại)
-
 \# Kiểm tra sự tồn tại - O(1)
-
 if 3 in s:
-
-`    `print("3 có trong set")
-
-\# Các phép toán tập hợp
-
+   print("3 có trong set")
+# Các phép toán tập hợp
 a = {1, 2, 3}
-
 b = {3, 4, 5}
-
 print(a | b)  # Hợp (Union): {1, 2, 3, 4, 5}
-
 print(a & b)  # Giao (Intersection): {3}
-
 print(a - b)  # Hiệu (Difference): {1, 2}
-
 print(a ^ b)  # Hiệu đối xứng (Symmetric Difference): {1, 2, 4, 5}
+```
 
-1. Counter
+<b>2. Counter</b>
 
+```python
 from collections import Counter
-
-\# Tạo multiset từ danh sách
-
+# Tạo multiset từ danh sách
 ms = Counter([1, 1, 2, 3, 3, 3, 4])
-
 print(ms)  # Kết quả: Counter({3: 3, 1: 2, 2: 1, 4: 1})
-
-\# Thêm và giảm phần tử
-
+# Thêm và giảm phần tử
 ms[1] += 1        # Thêm một phần tử 1 vào multiset
-
 ms.update([3, 5]) # Thêm nhiều phần tử
-
 ms.subtract([3])  # Giảm 1 lần xuất hiện của phần tử 3
-
-\# Kiểm tra số lần xuất hiện
-
+# Kiểm tra số lần xuất hiện
 print(ms[3])  # Trả về số lượng phần tử 3
-
 print(ms[99]) # Trả về 0 nếu không tồn tại (không báo lỗi)
-
-\# Duyệt qua tất cả các phần tử (bao gồm lặp)
-
-all\_elements = list(ms.elements())
-
-print(all\_elements)  # [1, 1, 1, 2, 3, 3, 3, 4, 5]
-
-\# Phép toán tập hợp multiset
-
+# Duyệt qua tất cả các phần tử (bao gồm lặp)
+all_elements = list(ms.elements())
+print(all_elements)  # [1, 1, 1, 2, 3, 3, 3, 4, 5]\# Phép toán tập hợp multiset
 c1 = Counter(a=3, b=1)
-
 c2 = Counter(a=1, b=2)
-
 print(c1 + c2)  # Cộng số lượng: Counter({'a': 4, 'b': 3})
-
 print(c1 & c2)  # Lấy min số lượng: Counter({'a': 1, 'b': 1})
-
 print(c1 | c2)  # Lấy max số lượng: Counter({'a': 3, 'b': 2})
+```
 
-1. Deque
+<b>3. Deque</b>
 
-Khai báo: dq = deque()
+Khai báo: ```dq = deque()```
 
 |Thao tác|Deque|
 | :- | :- |
@@ -450,30 +396,20 @@ Khai báo: dq = deque()
 |Lấy phần tử cuối cùng|dq[-1]|
 |Kiểm tra rỗng hay không|not dq|
 
+```python
 from collections import deque
-
-\# Khởi tạo deque
-
+# Khởi tạo deque
 dq = deque([20, 30])
-
-\# Thêm vào 2 đầu
-
+# Thêm vào 2 đầu
 dq.append(40)       # Thêm vào bên phải (cuối): [20, 30, 40]
-
 dq.appendleft(10)   # Thêm vào bên trái (đầu): [10, 20, 30, 40]
-
-\# Xem phần tử 2 đầu
-
+# Xem phần tử 2 đầu
 print("Front:", dq[0])   # Output: 10
-
 print("Back:", dq[-1])   # Output: 40
-
 \# Xóa từ 2 đầu
-
 left = dq.popleft() # Xóa bên trái -> 10
-
 right = dq.pop()    # Xóa bên phải -> 40
-
 print("Lưới deque còn lại:", dq)  # Output: deque([20, 30])
+```
 
-<details>
+</details>
