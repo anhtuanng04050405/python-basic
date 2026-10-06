@@ -406,7 +406,7 @@ dq.appendleft(10)   # Thêm vào bên trái (đầu): [10, 20, 30, 40]
 # Xem phần tử 2 đầu
 print("Front:", dq[0])   # Output: 10
 print("Back:", dq[-1])   # Output: 40
-\# Xóa từ 2 đầu
+# Xóa từ 2 đầu
 left = dq.popleft() # Xóa bên trái -> 10
 right = dq.pop()    # Xóa bên phải -> 40
 print("Lưới deque còn lại:", dq)  # Output: deque([20, 30])
